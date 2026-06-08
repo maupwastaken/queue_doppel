@@ -97,12 +97,6 @@ public class Stack {
             push(content);
             return;
         }
-
-        // Stack top is usually considered the start of the list in ausgabe()
-        // Let's check Stack.ausgabe()
-        // s = s + " " + lauf.getContent(); lauf = lauf.getZeiger();
-        // and push adds to top: temp.setZeiger(top); top = temp;
-        // So the list is [top, ..., bottom]
         
         if (content <= top.getContent()) {
             push(content);
