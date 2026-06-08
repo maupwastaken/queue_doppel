@@ -122,20 +122,17 @@ public class Queue {
 
         Element target;
         if (content < middle.getContent()) {
-            // Search between first and middle
             target = first.getZeiger();
             while (target != middle && target.getContent() < content) {
                 target = target.getZeiger();
             }
         } else {
-            // Search between middle and last
             target = middle;
             while (target != null && target.getContent() < content) {
                 target = target.getZeiger();
             }
         }
 
-        // Insert before target
         Element temp = new Element();
         temp.setContent(content);
         Element prev = target.getVorgaenger();

@@ -122,20 +122,17 @@ public class Stack {
 
         Element target;
         if (content < middle.getContent()) {
-            // Search between top and middle
             target = top.getZeiger();
             while (target != middle && target.getContent() < content) {
                 target = target.getZeiger();
             }
         } else {
-            // Search between middle and bottom
             target = middle;
             while (target != null && target.getContent() < content) {
                 target = target.getZeiger();
             }
         }
 
-        // Insert before target
         Element temp = new Element();
         temp.setContent(content);
         Element prev = target.getVorgaenger();
